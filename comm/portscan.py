@@ -188,12 +188,11 @@ class PortScan(object):
         """
         while True:
             ip, port = self.sp.get()
-            # print ip,port
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             # 判断端口的服务类型
             service = 'Unknown'
             try:
-                s.connect((ip, port))
+                s.connect(ip, int(port))
             except:
                 self.sp.task_done()
                 continue
@@ -208,7 +207,7 @@ class PortScan(object):
                         s.close()
                         sd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                         sd.settimeout(5)
-                        sd.connect((ip, port))
+                        sd.connect(ip, int(port))
                         sd.send(probe)
                     except:
                         continue
