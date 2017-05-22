@@ -1,0 +1,16 @@
+# Python:
+*.py[cod]
+*.pyc
+*.so
+*.egg
+*.egg-info
+build
+.idea
+.DS_Store
+.svn/*
+
+# result:
+*.txt
+
+# conf:
+*.conf
