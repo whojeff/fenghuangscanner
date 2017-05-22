@@ -9,9 +9,9 @@
 
 
 # 2.用法
-##fenghuangscan
+## fenghuangscan
 
-####wilson@wilson-2:~/tools/fenghuangscanner_$ python fenghuangscan.py -h
+#### wilson@wilson-2:~/tools/fenghuangscanner_$ python fenghuangscan.py -h
 usage: fenghuangscan.py [-h] [--ip IP] [--threads THREADS] [--P ISPING]
                         [--p USER_PORTS] [--file FILE]
 
