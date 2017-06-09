@@ -199,6 +199,8 @@ class PortScan(object):
 
             try:
                 result = s.recv(256)
+                if not result:
+                    raise Exception
                 service = self.match_banner(result, self.signs)
             except:
                 for probe in self.probes:
